@@ -1,4 +1,4 @@
-# CCH
+# CCH - Crash Compiler Helper!
 Interesting tool that may come out handy for compilers
 
 # Demo
