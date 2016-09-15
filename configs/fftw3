@@ -1,0 +1,19 @@
+./configure
+e->1->flags1->-qaltivec -O5
+e->1->TPREFIX->/home/ibm/libraries/fftw3-v1/
+f->1->--prefix->$TPREFIX
+f->1->--enable-debug->
+f->1->--enable-debug-malloc->
+f->1->--enable-debug-alignment->
+f->1->--enable-float->
+f->1->--enable-altivec->
+f->1->CC->xlc
+f->1->CFLAGS->$flags1
+f->1->LDFLAGS->$flags1
+f->1->CPP->xlc -E
+f->1->CPPFLAGS->$flags1
+f->1->--disable-fortran->
+f->1->--enable-static->
+f->1->--disable-shared->
+f->0->F77->xlf
+f->0->FFLAGS->$flags1

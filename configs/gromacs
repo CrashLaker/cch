@@ -1,0 +1,31 @@
+ccmake ../
+m->1->libraries/fftw-vsx-altivec/3.3.4
+e->1->TPREFIX->/home/ibm/softwares/gromacs/xlc/fftw-altivec/omp1/flagO0/
+e->1->flags1->-qnoinline -O0 -qsmp=omp
+e->1->blaslapackflags->-L/usr/lib -lessl -L/opt/ibm/xlf/15.1.2/lib/ -lxlf90 -lxlf90_t -L/opt/ibm/xlsmp/4.1.2/lib -lxlomp_ser
+f->1->-DGMX_MPI->OFF
+f->1->-DGMX_DOUBLE->OFF
+f->1->-DCMAKE_INSTALL_PREFIX->$TPREFIX
+f->1->-DBUILD_SHARED_LIBS->OFF
+f->1->-DFFTWF_LIBRARY->${vhpc_fftw3_libdir/libfftw3f.a
+f->1->-DGMX_FFT_LIBRARY->fftw3
+f->1->-DGMX_OPENMP->ON
+f->1->-DCMAKE_VERBOSE_MAKEFILE->ON
+f->1->-DGMX_GPU->OFF
+f->1->-DGMX_EXTERNAL_LAPACK->ON
+f->1->-DGMX_EXTERNAL_BLAS->ON
+f->1->-DGMX_BLAS_USER->$blaslapackflags
+f->1->-DGMX_LAPACK_USER->$blaslapackflags
+f->1->-DCMAKE_CXX_FLAGS->$flags1
+f->1->-DCMAKE_C_FLAGS->$flags1
+f->1->-DGMX_THREAD_MPI->OFF
+f->1->-DGMX_SIMD->IBM_VSX
+f->1->-DCMAKE_C_COMPILER->mpixlc
+f->1->-DCMAKE_CXX_COMPILER->mpixlc++
+f->1->-DFFT_LINKER_FLAGS->x
+f->1->-DLINEAR_ALGEBRA_LIBRARIES->x
+f->1->-DCOVERAGE_EXTRA_FLAGS->x
+f->1->-DCMAKE_VERBOSE_MAKEFILE->ON
+f->1->-DCMAKE_SHARED_LINKER_FLAGS->x
+f->1->-DGMX_BUILD_MDRUN_ONLY->ON 
+f->1->-DGMX_BUILD_SHARED_EXE->OFF

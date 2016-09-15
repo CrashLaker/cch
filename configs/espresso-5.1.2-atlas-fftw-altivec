@@ -1,0 +1,17 @@
+./configure
+m->1->libraries/fftw-vsx-altivec/3.3.4
+e->1->BLAS_LIBS->-L/usr/lib/atlas-base -lcblas -lf77blas -latlas
+e->1->LAPACK_LIBS->/usr/lib/atlas-base/atlas/liblapack.a
+e->1->FCFLAGS->-mcpu=power8 -mtune=power8 -O3 -ftree-vectorize -Ofast -fpeel-loops -funroll-loops -ftree-vectorize -fvect-cost-model -mcmodel=medium
+e->1->FFLAGS->-mcpu=power8 -mtune=power8 -O3 -ftree-vectorize -Ofast -fpeel-loops -funroll-loops -ftree-vectorize -fvect-cost-model -mcmodel=medium
+e->1->FFT_LIBS->${vhpc_fftw3_libdir}/libfftw3f.a
+e->1->FLIBS->-L/opt/at8.0/lib64
+f->1->--enable-parallel->
+f->1->--enable-openmp->
+f->1->--build->x86_64
+f->1->--without-scalapack->
+f->1->--prefix->$HOME/softwares/espresso/gnu-at8.0/atlas/fftw-altivec/flagO5
+f->1->--bindir->/opt/at8.0/bin
+f->1->--sbindir->/opt/at8.0/sbin
+f->1->--libexecdir->/opt/at8.0/libexec64
+f->1->--libdir->/opt/at8.0/lib64

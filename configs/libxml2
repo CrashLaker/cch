@@ -1,0 +1,17 @@
+./configure
+e->1->TPREFIX->/home/ibm/libraries/libxml2/aix/2.2.7
+f->1->--prefix->$TPREFIX
+f->1->CC->xlc
+f->1->CFLAGS->x
+f->1->LDFLAGS->x
+f->1->LIBS->x
+f->1->CPPFLAGS->x
+f->1->CPP->xlc -E
+f->1->CXX->xlc++
+f->1->CXXFLAGS->x
+f->1->CXXCPP->xlc -E
+f->1->F77->xlf
+f->1->FFLAGS->x
+f->1->--disable-static->
+f->1->--enable-shared->
+f->1->--build->x86_64

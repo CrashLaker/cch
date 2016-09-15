@@ -1,0 +1,15 @@
+./configure
+m->1->libraries/fftw-vsx-altivec/3.3.4
+e->1->BLAS_LIBS->-L/usr/lib -lessl -L/opt/ibm/xlf/15.1.2/lib/ -lxlf90 -lxlf90_t -L/opt/ibm/xlsmp/4.1.2/lib -lxlomp_ser
+e->1->LAPACK_LIBS->-L/usr/lib -lessl -L/opt/ibm/xlf/15.1.2/lib/ -lxlf90 -lxlf90_t -L/opt/ibm/xlsmp/4.1.2/lib -lxlomp_ser
+e->1->FFT_LIBS->-L/usr/lib/powerpc64le-linux-gnu -lfftw3f_omp
+e->1->FCFLAGS->-O5 -qsmp=omp
+e->1->FFLAGS->-O5 -qsmp=omp -L/opt/ibm/xlf/15.1.1/lib -lxlf90_r -lxlfmath
+e->1->FFT_LIBS->${vhpc_fftw3_libdir}/libfftw3f.a
+f->1->--enable-parallel->
+f->1->--enable-openmp->
+f->1->--build->ibm_aix
+f->1->--without-scalapack->
+f->1->--prefix->$HOME/softwares/espresso/xlf/essl-fftw-altivec/flagO5
+f->1->FLIBS->-L/opt/ibm/xlsmp/4.1.0/lib -L/opt/ibm/xlmass/8.1.0/lib -L/opt/ibm/xlf/15.1.1/lib -R/opt/ibm/lib -L/usr/lib/gcc/powerpc64le-linux-gnu/4.9 -L/usr/lib/gcc/powerpc64le-linux-gnu/4.9/../../../powerpc64le-linux-gnu -L/usr/lib/gcc/powerpc64le-linux-gnu/4.9/../../../../lib -L/lib/powerpc64le-linux-gnu -L/lib/../lib -L/usr/lib/powerpc64le-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/powerpc64le-linux-gnu/4.9/../../.. -ldl -lrt -lpthread -lm
+f->1->CPP->xlc -E

@@ -1,0 +1,10 @@
+./configure
+e->1->BLAS_LIBS->-L/usr/lib/atlas-base -lcblas -lf77blas -latlas
+e->1->LAPACK_LIBS->/usr/lib/atlas-base/atlas/liblapack.a
+e->1->FFT_LIBS->-L/usr/lib/powerpc64le-linux-gnu -lfftw3f_omp
+e->1->FCFLAGS->-mcpu=power8 -mtune=power8 -O3 -ftree-vectorize -Ofast -fpeel-loops -funroll-loops -ftree-vectorize -fvect-cost-model -mcmodel=medium
+e->1->FFLAGS->-mcpu=power8 -mtune=power8 -O3 -ftree-vectorize -Ofast -fpeel-loops -funroll-loops -ftree-vectorize -fvect-cost-model -mcmodel=medium
+f->1->--enable-parallel->
+f->1->--enable-openmp->
+f->1->--build->x86_64
+f->1->--without-scalapack->

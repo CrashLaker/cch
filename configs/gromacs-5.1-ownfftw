@@ -1,0 +1,43 @@
+cmake ../
+m->1->libraries/fftw3-noaltivec
+m->1->libraries/libxml2/aix/2.2.7
+e->1->TPREFIX->/home/ibm/softwares/gromacs/xlc/fftw-altivec/mpi0/omp1/flagO0/v2
+e->1->flags1->-qnoinline -O0 -qsmp=omp -g9 -qalign=bit_packed
+e->1->blaslapackflags->-L/usr/lib -lessl -L/opt/ibm/xlf/15.1.2/lib/ -lxlf90 -lxlf90_t -L/opt/ibm/xlsmp/4.1.2/lib -lxlomp_ser
+e->1->CC->xlc
+e->1->CPP->xlc -E
+e->1->CXX->xlc++
+f->1->-DGMX_MPI->OFF
+f->1->-DGMX_DOUBLE->OFF
+f->1->-DCMAKE_INSTALL_PREFIX->$TPREFIX
+f->1->-DBUILD_SHARED_LIBS->OFF
+f->0->-DFFTWF_LIBRARY->${vhpc_fftw3_libdir}/libfftw3f.a
+f->0->-DGMX_FFT_LIBRARY->fftw3
+f->1->-DGMX_OPENMP->ON
+f->1->-DCMAKE_VERBOSE_MAKEFILE->ON
+f->1->-DGMX_GPU->OFF
+f->1->-DGMX_EXTERNAL_LAPACK->ON
+f->1->-DGMX_EXTERNAL_BLAS->ON
+f->1->-DGMX_BLAS_USER->$blaslapackflags
+f->1->-DGMX_LAPACK_USER->$blaslapackflags
+f->1->-DCMAKE_CXX_FLAGS->$flags1
+f->1->-DCMAKE_C_FLAGS->$flags1
+f->1->-DGMX_THREAD_MPI->OFF
+f->1->-DGMX_SIMD->IBM_VSX
+f->1->-DCMAKE_C_COMPILER->xlc
+f->1->-DCMAKE_CXX_COMPILER->xlc++
+f->1->-DFFT_LINKER_FLAGS->x
+f->1->-DLINEAR_ALGEBRA_LIBRARIES->x
+f->1->-DCOVERAGE_EXTRA_FLAGS->x
+f->1->-DCMAKE_VERBOSE_MAKEFILE->ON
+f->1->-DCMAKE_SHARED_LINKER_FLAGS->x
+f->1->-DGMX_BUILD_MDRUN_ONLY->ON 
+f->1->-DGMX_BUILD_SHARED_EXE->OFF
+f->1->-DGMX_BUILD_UNITTESTS->ON
+f->1->-DLIBXML2_INCLUDE_DIR->/usr/include/libxml2
+f->1->-DLIBXML2_LIBRARIES->$libxml_libdir/libxml2.a
+f->1->-DLIBXML2_LIBRARIES->/usr/lib/powerpc64le-linux-gnu/libxml2.so.2.9.1
+f->1->-DLIBXML2_XMLLINT_EXECUTABLE->/usr/bin/xmllint
+f->1->-DGMX_BROKEN_CALLOC->ON
+f->1->-DCMAKE_BUILD_TYPE->Debug
+f->1->-DGMX_BUILD_OWN_FFTW->ON

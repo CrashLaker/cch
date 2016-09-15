@@ -1,0 +1,13 @@
+espresso
+espresso-5.1.2-atlas
+espresso-5.1.2-atlas-fftw-altivec
+espresso-5.1.2-essl-fftw-altivec
+fftw3
+fftw3-altivec
+gromacs
+gromacs-5.1-essl-fftw-altivec
+gromacs-5.1-gnu
+gromacs-5.1-ownfftw
+gromacs-5.1-threadmpi
+gromacs-threadmpi
+libxml2
